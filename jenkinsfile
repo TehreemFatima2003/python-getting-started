@@ -4,7 +4,7 @@ pipeline {
         IMAGE_NAME = "flask-selenium-test"
     }
     stages {
-        // Remove 'Clone Repo' - Jenkins already checks out the code via Pipeline SCM
+        
         stage('Linting') {
             steps {
                 sh 'pip install flake8 && flake8 app.py || true'
